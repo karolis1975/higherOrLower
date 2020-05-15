@@ -1,4 +1,4 @@
-const maxResults = 2;
+const maxResults = 50;
 const playListID = "PL6jGN3ysDGdZaLvN94mIztDphCuE4r34p";
 const restAPI = "AIzaSyAfcKNQnKvviqc55JvgNHLbIP0ec6Sx1gQ";
 let videoIDs = "";
