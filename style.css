@@ -1,0 +1,375 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+#gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#gif .darkOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#gif img {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.main {
+  padding-top: 200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main .statistics {
+  position: absolute;
+  bottom: 10px;
+  font-size: 2rem;
+}
+
+.main .highestScore {
+  left: 20px;
+  color: white;
+}
+
+.main .score {
+  right: 20px;
+}
+
+.main .youtubeTitle {
+  color: #ff5050;
+  position: fixed;
+  padding: 20px 0;
+  background: #1a1a1a;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+.main .background,
+.main .background2 {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main .background {
+  left: 0;
+  background: #141414;
+}
+
+.main .background2 {
+  right: 0;
+}
+
+.main .bothVideos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .video {
+  text-align: center;
+  width: 480px;
+  letter-spacing: 1.5px;
+}
+
+.main .video.animate {
+  -webkit-animation: showUp 0.5s forwards;
+          animation: showUp 0.5s forwards;
+}
+
+.main .video img {
+  border-radius: 10px;
+}
+
+@-webkit-keyframes showUp {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.main .video .firstVideoTitle,
+.main .video .secondVideoTitle {
+  padding: 10px 0;
+}
+
+.main .video .secondVideoTitle,
+.main .video .secondVideoViewsText {
+  color: white;
+}
+
+.main .video .firstVideoViews,
+.main .video .secondVideoViews {
+  color: #ff5050;
+}
+
+.main .video .secondVideoViewsText {
+  padding-bottom: 10px;
+  opacity: 0;
+}
+
+.main .video .secondVideoViewsText.showUpViews {
+  -webkit-animation: showViews 0.5s forwards;
+          animation: showViews 0.5s forwards;
+}
+
+@-webkit-keyframes showViews {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showViews {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main h1 {
+  font-size: 1.5rem;
+}
+
+.main .higherLower {
+  z-index: 2;
+}
+
+.main .higherLower .endScoreText,
+.main .higherLower .newHighScore {
+  font-size: 1.2rem;
+  text-align: center;
+  visibility: hidden;
+}
+
+.main .higherLower .endScoreText {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 2rem;
+}
+
+.main .higherLower .newHighScore {
+  margin-top: 20px;
+  color: #ffbbbb;
+}
+
+.main .higherLower .showResult {
+  width: 70px;
+  height: 70px;
+  background: #5dc55d;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+@-webkit-keyframes popUp {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes popDown {
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes popDown {
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+.main .higherLower .showResult i {
+  font-size: 2rem;
+  color: white;
+}
+
+@-webkit-keyframes icon {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes icon {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.main .higherLower .higher {
+  background: white;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.main .higherLower .higher::after {
+  padding-left: 10px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f077";
+}
+
+.main .higherLower .higher:hover {
+  background: #ff5050;
+}
+
+.main .higherLower .restart {
+  pointer-events: initial;
+  width: 100%;
+  display: none;
+  color: #ff1f1f;
+  font-weight: bold;
+}
+
+.main .higherLower .restart:hover {
+  background: #e6e6e6;
+}
+
+.main .higherLower .restart::after {
+  padding-left: 0;
+  content: none;
+}
+
+.main .higherLower .lower {
+  background: #141414;
+  font-weight: bold;
+  color: white;
+}
+
+.main .higherLower .lower::after {
+  padding-left: 10px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+}
+
+.main .higherLower .lower:hover {
+  background: #ff5050;
+}
+/*# sourceMappingURL=style.css.map */

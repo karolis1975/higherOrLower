@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HigherLower</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bee6d95ecf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="youtubeTitle">
+        <h1>Guess which song has more YouTube Views</h1>
+      </div>
+      <div id="gif">
+        <div class="darkOverlay"></div>
+        <img src="" />
+      </div>
+
+      <div class="background"></div>
+      <div class="background2"></div>
+      <div class="bothVideos">
+        <div class="SecondVideo video">
+          <img src="" class="secondVideoImg" />
+          <h1 class="videoTitle secondVideoTitle"></h1>
+          <h1 class="secondVideoViewsText">
+            <span class="secondVideoViews"></span> Youtube Views
+          </h1>
+        </div>
+
+        <div class="higherLower">
+          <h1 class="endScoreText">
+            Your score: <span class="endScore"></span>
+          </h1>
+          <div class="showResult">
+            <i class="fas fa-check"></i>
+          </div>
+          <button class="higher button">Higher</button>
+          <button class="lower button">Lower</button>
+          <button class="restart button">Restart</button>
+          <h1 class="newHighScore">
+            Congrats! Your New HighScore is
+            <span class="newHighScoreText"></span>
+          </h1>
+        </div>
+
+        <div class="firstVideo video">
+          <img src="" class="firstVideoImg" />
+          <h1 class="videoTitle firstVideoTitle"></h1>
+          <h1><span class="firstVideoViews"></span> Youtube Views</h1>
+        </div>
+      </div>
+      <h5 class="highestScore statistics">
+        Highest Score: <span class="highestScoreText"></span>
+      </h5>
+      <h5 class="score statistics">Score: <span class="scoreText"></span></h5>
+    </div>
+  </body>
+</html>
+<script src="main.js"></script>
