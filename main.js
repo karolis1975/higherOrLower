@@ -1,4 +1,4 @@
-const maxResults = 50;
+const maxResults = 2;
 const playListID = "PL6jGN3ysDGdZaLvN94mIztDphCuE4r34p";
 const restAPI = "AIzaSyAfcKNQnKvviqc55JvgNHLbIP0ec6Sx1gQ";
 let videoIDs = "";
@@ -46,6 +46,26 @@ getPlaylist();
 higherBtn.addEventListener("click", isHigher);
 restartBtn.addEventListener("click", playAgain);
 lowerBtn.addEventListener("click", isLower);
+
+function main() {
+  showResult.style.cssText = "animation: popDown 0.2s forwards";
+  showResultIcon.style.cssText = "animation: none";
+  secondVideoViewsText.classList.remove("showUpViews");
+  bothVideos[0].classList.add("animate");
+  bothVideos[1].classList.add("animate");
+  higherLower.style.cssText = "pointer-events: initial";
+
+  scoreText.textContent = score;
+  highestScoreText.textContent = highestScore;
+  firstVideoImg.src = videos[turn].image;
+  firstVideoTitle.textContent = videos[turn].title;
+  firstVideoViews.innerHTML =
+    videos[turn].views.toLocaleString() +
+    "<span style='color:black'> Youtube Views</span>";
+
+  secondVideoTitle.textContent = videos[turn + 1].title;
+  secondVideoImg.src = videos[turn + 1].image;
+}
 
 function isHigher() {
   bothVideos[0].classList.remove("animate");
@@ -198,24 +218,6 @@ function shuffleVideos(videos) {
     videos[i].views = Math.floor(videos[i].views / 1000000);
     videos[i].views *= 1000000;
   }
-}
-
-function main() {
-  showResult.style.cssText = "animation: popDown 0.2s forwards";
-  showResultIcon.style.cssText = "animation: none";
-  secondVideoViewsText.classList.remove("showUpViews");
-  bothVideos[0].classList.add("animate");
-  bothVideos[1].classList.add("animate");
-  higherLower.style.cssText = "pointer-events: initial";
-
-  scoreText.textContent = score;
-  highestScoreText.textContent = highestScore;
-  firstVideoImg.src = videos[turn].image;
-  firstVideoTitle.textContent = videos[turn].title;
-  firstVideoViews.textContent = videos[turn].views.toLocaleString();
-
-  secondVideoTitle.textContent = videos[turn + 1].title;
-  secondVideoImg.src = videos[turn + 1].image;
 }
 
 function getPlaylist() {
