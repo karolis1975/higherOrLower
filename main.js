@@ -1,21 +1,10 @@
-const maxResults = 2;
+const maxResults = 50;
 const playListID = "PL6jGN3ysDGdZaLvN94mIztDphCuE4r34p";
 const restAPI = "AIzaSyAfcKNQnKvviqc55JvgNHLbIP0ec6Sx1gQ";
 let videoIDs = "";
 
-//const videos = [];
-const videos = [
-  {
-    title: "Eminem",
-    views: "2000000",
-    image: "https://i.ytimg.com/vi/_Yhyp-_hX2s/hqdefault.jpg",
-  },
-  {
-    title: "PSY",
-    views: "3000000",
-    image: "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
-  },
-];
+const videos = [];
+
 const gif = document.querySelector("#gif");
 const gifImg = document.querySelector("#gif img");
 
@@ -52,7 +41,7 @@ let nextTurn = false;
 if (localStorage.getItem("score") != null)
   highestScore = localStorage.getItem("score");
 
-//getPlaylist();
+getPlaylist();
 
 higherBtn.addEventListener("click", isHigher);
 restartBtn.addEventListener("click", playAgain);
@@ -255,8 +244,8 @@ function getVideo() {
         };
         videos.push(videoInfo);
       }
+      shuffleVideos(videos);
+      main();
     }
   );
 }
-shuffleVideos(videos);
-main();
